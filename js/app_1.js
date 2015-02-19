@@ -26,7 +26,20 @@ featureLayer.on('ready', function(){
   });
   map.fitBounds(featureLayer.getBounds());
 });
+//Add Data 2
+var dataFileToAdd2 = 'homeroute.geojson';
 
+var featureLayer2 = L.mapbox.featureLayer();
+
+    featureLayer2.loadURL(dataFileToAdd2);
+    featureLayer2.addTo(map);
+
+featureLayer2.on('ready', function(){
+  this.setStyle({
+    "color": "#a90a0a"
+  });
+  //map.fitBounds(featureLayer.getBounds());
+});
 ///////////////////
 //Add popup
 
