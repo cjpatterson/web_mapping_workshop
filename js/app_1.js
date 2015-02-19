@@ -10,3 +10,6 @@ var map = L.mapbox.map('map', mapId);
 
 //Set the view of the map to the whole US
 map.setView([39, -96], 5);
+
+//Add Data
+var dataFileToAdd = 'data/restaurants.geojson';
