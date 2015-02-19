@@ -31,7 +31,7 @@ var dataFileToAdd2 = 'homeroute.geojson';
 
 var featureLayer2 = L.mapbox.featureLayer();
 
-    featureLayer2.loadURL(dataFileToAdd);
+    featureLayer2.loadURL(dataFileToAdd2);
     featureLayer2.addTo(map);
 
 featureLayer2.on('ready', function(){
