@@ -48,7 +48,13 @@ featureLayer2.on('ready', function(){
 //         layer.bindPopup('Name: ' + layer.feature.properties.name);
 //     });
 // });
-
+//Add popup for line
+// code for simple popup
+ featureLayer2.on('ready', function(){
+     this.eachLayer(function(layer){
+         layer.bindPopup('Miles: ' + layer.feature.info.Miles);
+     });
+ });
 //clear the panel
 map.on('click', function(){
     $('#info').fadeOut(200);
