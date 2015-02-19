@@ -28,3 +28,10 @@ featureLayer.on('ready', function(){
 });
 
 ///////////////////
+//Add popup
+
+featureLayer.on('ready', function(){
+    this.eachLayer(function(layer){
+        layer.bindPopup('Name: ' + layer.feature.properties.name);
+    });
+});
