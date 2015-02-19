@@ -9,7 +9,22 @@ L.mapbox.accessToken = token;
 var map = L.mapbox.map('map', mapId);
 
 //Set the view of the map to the whole US
-map.setView([39, -96], 5);
+map.setView([38, -95], 5);
 
 //Add Data
 var dataFileToAdd = 'data/restaurants.geojson';
+
+var featureLayer = L.mapbox.featureLayer();
+
+    featureLayer.loadUrl(dataFileToAdd);
+    featureLayer.addTo(map);
+
+featureLayer.on('ready' function(){
+  this.setStyle({
+    "marker-color": "#777777",
+    "marker-size": "medium"
+  });
+  map.fitBounds(featureLayer.getBounds());
+});
+
+///////////////////
