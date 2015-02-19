@@ -52,7 +52,7 @@ featureLayer2.on('ready', function(){
 // code for simple popup
  featureLayer2.on('ready', function(){
      this.eachLayer(function(layer){
-         layer.bindPopup('Miles: ' + layer.feature.info.Miles);
+         layer.bindPopup('Miles: ' + layer.feature.properties.Miles);
      });
  });
 //clear the panel
